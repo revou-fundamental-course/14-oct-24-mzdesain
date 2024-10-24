@@ -1,0 +1,392 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background: white;
+        color: #333;
+    }
+
+    /* Bagian Header */
+    /* Default (Desktop) Styles */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background: #123456;
+        color: white;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .logo img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-menu ul li {
+        margin-left: 20px;
+    }
+
+    .nav-menu ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    .nav-menu ul li a:hover {
+        color: #728FCE;
+    }
+
+    /* Burger Icon (hidden by default) */
+    .burger-menu {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: white;
+    }
+
+    /* Responsive (Mobile) Styles */
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+        }
+
+        .nav-menu {
+            display: none; /* Hide the menu initially */
+            width: 100%;
+        }
+
+        .nav-menu ul {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .nav-menu ul li {
+            margin: 10px 0;
+        }
+
+        .burger-menu {
+            display: block; /* Show burger menu icon */
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        /* Show the menu when it is active */
+        .nav-menu.active {
+            display: block;
+        }
+    }
+
+    /* Heading */
+    .welcome-section {
+        padding: 40px;
+        text-align: left;
+        max-width: 1200px;
+        margin: 40px auto;
+    }
+
+    .welcome-section h2 {
+        font-size: 1.5em;
+        color: #123456;
+    }
+
+    .welcome-section p {
+        font-size: 1em;
+        color: #000;
+    }
+
+    /* Slide Banner */
+    .banner {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .banner .slide {
+        min-width: 100%;
+        height: auto;
+        transition: 0.5s ease-in-out;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+    }
+
+    /* Heading Welcome */
+    .welcome-section {
+        padding: 40px;
+        text-align: left;
+    }
+
+    .welcome-section h2 {
+        font-size: 2.5em;
+        color: #808000;
+        margin-bottom: 0px;
+    }
+
+    .welcome-section h2 span {
+        color:  #151B8D;
+        font-size: 1em;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .welcome-section p {
+        font-size: 1em;
+        color: #0a0a0a;
+    }
+
+    /* Bagian Profil */
+    .profile {
+        padding: 40px;
+        text-align: center;
+        margin: 40px auto;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+
+    .text-section {
+        flex: 1;
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    .text-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: #808000;
+    }
+
+    .text-section h1 span {
+        color: #151B8D;
+    }
+
+    .text-section p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    .download-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #123456;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .download-btn:hover {
+        background-color: #151B8D;
+    }
+
+    .image-section {
+        flex: 0 0 300px;
+    }
+
+    .image-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* Responsif untuk layar yang lebih kecil */
+    @media (max-width: 768px) {
+        .profile {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .text-section {
+            padding-right: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .image-section {
+            flex: none;
+        }
+    }
+
+    /* Bagian Portofolio */
+    .portfolio {
+        padding: 40px;
+        text-align: center;
+        margin: 40px auto;
+        max-width: 1200px;
+    }
+
+    .portfolio h2 {
+        font-size: 2.5em;
+        color: #123456;
+        margin-bottom: 30px;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .skill {
+        width: 80%;
+        text-align: left;
+    }
+
+    .skill-name {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .skill-bar {
+        width: 100%;
+        height: 25px;
+        background-color: #eee;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .skill-percentage {
+        height: 100%;
+        background: #123456;
+        border-radius: 15px 0 0 15px;
+        color: white;
+        text-align: right;
+        padding-right: 10px;
+        line-height: 25px;
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* Bagian Message */
+    .message-us {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+        max-width: 1200px;
+        margin: 40px auto;
+    }
+
+    h3 {
+        border-left: 5px solid #123456;
+        padding-left: 15px;
+        color: #123456;
+    }
+
+    form {
+        width: 45%;
+    }
+
+    form label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .gender-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .gender-container label {
+        margin-right: 10px;
+    }
+
+    .gender-container select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    form button {
+        padding: 10px 20px;
+        background-color: #123456;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+        background-color: #151B8D;
+    }
+
+    #form-output {
+        width: 45%;
+        padding-left: 20px;
+        border-left: 2px solid #123456;
+        border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+        .message-us {
+            flex-direction: column;
+        }
+
+        form, #form-output {
+            width: 100%;
+        }
+    }
+
+    /* Bagian Footer */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #123456;
+        color: white;
+        margin-top: 40px;
+    }
